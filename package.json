@@ -1,0 +1,24 @@
+{
+  "name": "noderestapi",
+  "version": "1.0.0",
+  "description": "aplikasi rest api",
+  "keywords": [
+    "rest",
+    "api"
+  ],
+  "homepage": "https://github.com/coach-ugenx/noderestapi#readme",
+  "bugs": {
+    "url": "https://github.com/coach-ugenx/noderestapi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coach-ugenx/noderestapi.git"
+  },
+  "license": "ISC",
+  "author": "dhea ananda",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
