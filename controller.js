@@ -53,6 +53,7 @@ exports.tambahData = function (req, res) {
   );
 };
 
+//mengedit data
 exports.editData = function (req, res) {
   var id = req.body.id_mhs;
   var nama = req.body.nama;
@@ -67,6 +68,23 @@ exports.editData = function (req, res) {
         console.log(error);
       } else {
         response.ok("Data Berhasil di Update !!!", res);
+      }
+    }
+  );
+};
+
+//mendelete data
+exports.deleteData = function (req, res) {
+  var id = req.body.id_mhs;
+
+  connection.query(
+    "DELETE FROM mahasiswa WHERE id_mhs=?",
+    [id],
+    function (error, rows, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        response.ok("Data Berhasil di Delete !!!", res);
       }
     }
   );
