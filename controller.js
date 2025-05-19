@@ -52,3 +52,22 @@ exports.tambahData = function (req, res) {
     }
   );
 };
+
+exports.editData = function (req, res) {
+  var id = req.body.id_mhs;
+  var nama = req.body.nama;
+  var nim = req.body.nim;
+  var jurusan = req.body.jurusan;
+
+  connection.query(
+    "UPDATE mahasiswa SET nama=?, nim=?, jurusan=? WHERE id_mhs=?",
+    [id, nama, nim, jurusan],
+    function (error, rows, fields) {
+      if (error) {
+        console.log(error);
+      } else {
+        response.ok("Data Berhasil di Update !!!", res);
+      }
+    }
+  );
+};
