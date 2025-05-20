@@ -8,4 +8,5 @@ module.exports = function (app) {
   app.route("/POST").post(jsonku.tambahData);
   app.route("/PUT").put(jsonku.editData);
   app.route("/DELETE").delete(jsonku.deleteData);
+  app.route("/tampilGroupMatkul").get(jsonku.tampilGroupMatkul);
 };
